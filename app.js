@@ -1,6 +1,12 @@
 const PRODUCTS = window.BOCATTO_PRODUCTS || [];
 
 const WHATSAPP = '51967539019';
+document.querySelectorAll('[data-bocatto-logo]').forEach((img) => {
+  if (window.BOCATTO_LOGO) {
+    img.src = `data:image/png;base64,${window.BOCATTO_LOGO}`;
+  }
+});
+
 const state = { category: 'Todos', query: '', visible: 18 };
 const catalog = document.querySelector('#catalog-grid');
 const count = document.querySelector('#result-count');
