@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" role="img" aria-labelledby="t d">
+<title id="t">Bocatto</title><desc id="d">Bocaditos para eventos</desc>
+<rect width="1024" height="1024" fill="#fffdf9"/>
+<circle cx="512" cy="512" r="408" fill="none" stroke="#c59555" stroke-width="2.6"/>
+<circle cx="512" cy="512" r="388" fill="none" stroke="#221c18" stroke-width="2.2"/>
+<g transform="translate(512 275)" stroke="#c59555" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M0-70v73"/><path d="M0-70c-22-26-45 7 0 38 45-31 22-64 0-38z"/>
+  <path d="M-61 26l-27-38M61 26l27-38M-86 54l-34-17M86 54l34-17" stroke-width="2.5"/>
+</g>
+<g transform="translate(512 337)">
+  <ellipse cx="0" cy="0" rx="26" ry="20" fill="#efe5d3" stroke="#c8ad83" stroke-width="2"/>
+  <path d="M0-14c-4-15 8-25 17-28-3 13-9 22-17 28z" fill="#41643e"/>
+  <path d="M-36 23h72v13l-36 12-36-12z" fill="#a66b32"/>
+  <path d="M-34 37h68v16H-34z" fill="#d9a86b" stroke="#8a572b" stroke-width="2"/>
+  <path d="M-31 54h62v14H-31z" fill="#9c5f2d"/>
+</g>
+<path d="M402 414h220" stroke="#c59555" stroke-width="3" stroke-linecap="round"/>
+<text x="512" y="560" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="142" letter-spacing="6" fill="#1e1916">BOCATTO</text>
+<path d="M512 578c-17-22-43 4 0 34 43-30 17-56 0-34z" fill="#d19b5f"/>
+<path d="M300 628h167M557 628h167" stroke="#c59555" stroke-width="2"/>
+<circle cx="512" cy="628" r="6" fill="#c59555"/>
+<circle cx="292" cy="674" r="5" fill="#c59555"/>
+<circle cx="732" cy="674" r="5" fill="#c59555"/>
+<text x="512" y="684" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="29" font-weight="700" letter-spacing="7" fill="#221c18">BOCADITOS PARA EVENTOS</text>
+</svg>
