@@ -1,14 +1,101 @@
 <!doctype html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#f8f3ea" />
-    <meta name="description" content="Bocatto — bocaditos para eventos, celebraciones y momentos especiales en Arequipa." />
-    <title>Bocatto | Bocaditos para eventos</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f1e8">
+  <meta name="description" content="Bocatto: bocaditos dulces, salados, premium, infantiles, postres y box lunch para eventos en Arequipa. Cotiza por WhatsApp.">
+  <meta property="og:title" content="Bocatto | Bocaditos para eventos">
+  <meta property="og:description" content="Pequeños bocados, grandes momentos. Descubre opciones para cumpleaños, bodas, empresas y celebraciones.">
+  <meta property="og:type" content="website">
+  <title>Bocatto | Bocaditos para eventos en Arequipa</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>♡</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#catalogo">Ir al catálogo</a>
+  <header class="site-header">
+    <a class="brand" href="#inicio" aria-label="Bocatto, inicio">
+      <img src="./logo.svg" alt="Logo de Bocatto">
+      <span><strong>BOCATTO</strong><small>Bocaditos para eventos</small></span>
+    </a>
+    <button id="menu-button" class="menu-button" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Abrir menú"><span></span><span></span></button>
+    <nav id="site-nav" class="site-nav" aria-label="Navegación principal">
+      <a href="#catalogo">Catálogo</a><a href="#eventos">Eventos</a><a href="#como-pedir">Cómo pedir</a><a href="#faq">Preguntas</a>
+      <a class="nav-cta" data-whatsapp="Hola Bocatto, quisiera cotizar bocaditos para mi evento." target="_blank" rel="noopener">Cotizar</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-copy">
+        <span class="eyebrow">Bocaditos para eventos · Arequipa</span>
+        <h1>Pequeños bocados,<br><em>grandes momentos.</em></h1>
+        <p class="hero-text">Una selección cuidada de bocaditos dulces y salados, opciones premium, propuestas infantiles, postres y box lunch para celebrar como se debe.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#catalogo">Explorar catálogo</a>
+          <a class="button ghost" data-whatsapp="Hola Bocatto, tengo un evento y quisiera que me ayuden a elegir bocaditos." target="_blank" rel="noopener">Ayúdame a elegir <span>↗</span></a>
+        </div>
+        <div class="hero-trust"><span>✓ Variedad para cada evento</span><span>✓ Atención directa por WhatsApp</span><span>✓ Presentaciones por cantidad</span></div>
+      </div>
+      <div class="hero-visual" aria-label="Identidad de Bocatto">
+        <div class="halo"></div>
+        <div class="logo-card"><img src="./logo.svg" alt="Bocatto, bocaditos para eventos"><p>Elegancia, variedad y sabor para compartir.</p></div>
+        <span class="floating-tag tag-one">Dulces</span><span class="floating-tag tag-two">Salados</span><span class="floating-tag tag-three">Premium</span>
+      </div>
+    </section>
+
+    <section class="event-strip" aria-label="Tipos de evento">
+      <span>Cumpleaños</span><i>✦</i><span>Bodas</span><i>✦</i><span>Empresas</span><i>✦</i><span>Eventos infantiles</span><i>✦</i><span>Coffee breaks</span>
+    </section>
+
+    <section class="catalog-section" id="catalogo">
+      <div class="section-head">
+        <div><span class="eyebrow">Nuestro catálogo</span><h2>Encuentra tu combinación ideal.</h2><p>Precios y presentaciones tomados del catálogo disponible. Confirma disponibilidad y vigencia al cotizar.</p></div>
+        <label class="search-box"><span aria-hidden="true">⌕</span><input id="catalog-search" type="search" placeholder="Buscar tequeños, postres, box lunch..." autocomplete="off"><span class="sr-only">Buscar productos</span></label>
+      </div>
+      <div id="category-filters" class="filter-row" aria-label="Filtrar por categoría"></div>
+      <div class="catalog-meta"><span id="result-count" aria-live="polite"></span><span>Delivery con costo adicional</span></div>
+      <div id="catalog-grid" class="catalog-grid"></div>
+      <div id="catalog-empty" class="empty-state" hidden><strong>No encontramos coincidencias.</strong><p>Prueba con otra búsqueda o revisa todas las categorías.</p></div>
+      <button id="load-more" class="load-more" type="button">Ver más opciones</button>
+    </section>
+
+    <section class="split-section" id="eventos">
+      <div class="split-copy"><span class="eyebrow">Para cada ocasión</span><h2>Una mesa que también se recuerda.</h2><p>Desde una reunión íntima hasta una celebración grande, puedes combinar bocaditos clásicos, especiales y premium según el estilo de tu evento.</p><a class="text-link" data-whatsapp="Hola Bocatto, quiero armar una propuesta personalizada para mi evento." target="_blank" rel="noopener">Armar una propuesta personalizada <span>↗</span></a></div>
+      <div class="occasion-grid"><article><span>01</span><h3>Celebraciones</h3><p>Cumpleaños, aniversarios, bautizos, primeras comuniones y reuniones familiares.</p></article><article><span>02</span><h3>Eventos especiales</h3><p>Bodas, 15 años y mesas con opciones premium.</p></article><article><span>03</span><h3>Empresas</h3><p>Coffee breaks, brunch, reuniones y presentaciones corporativas.</p></article><article><span>04</span><h3>Infantiles</h3><p>Box lunch, loncheritas, porciones de torta y opciones pensadas para niños.</p></article></div>
+    </section>
+
+    <section class="how-section" id="como-pedir">
+      <div class="section-head compact"><div><span class="eyebrow">Simple y directo</span><h2>Así coordinamos tu pedido.</h2></div></div>
+      <div class="steps"><article><b>1</b><h3>Cuéntanos tu evento</h3><p>Indícanos fecha, hora, tipo de celebración y número aproximado de invitados.</p></article><article><b>2</b><h3>Elige tus favoritos</h3><p>Envíanos la lista de productos o pide ayuda para armar una combinación.</p></article><article><b>3</b><h3>Confirma disponibilidad</h3><p>Te confirmamos presentaciones, precios vigentes y tiempo de anticipación según el producto.</p></article><article><b>4</b><h3>Coordinamos entrega</h3><p>El delivery tiene costo adicional y se coordina según zona y fecha.</p></article></div>
+      <a class="button primary center" data-whatsapp="Hola Bocatto, quisiera coordinar un pedido para mi evento." target="_blank" rel="noopener">Coordinar por WhatsApp</a>
+    </section>
+
+    <section class="faq-section" id="faq">
+      <div><span class="eyebrow">Antes de pedir</span><h2>Preguntas frecuentes.</h2></div>
+      <div class="faq-list">
+        <details><summary>¿Con cuánta anticipación debo pedir?</summary><p>Depende del producto. Algunas opciones pueden requerir desde 24 horas y otras entre 2, 3 o hasta 6 días. Recomendamos consultar disponibilidad lo antes posible.</p></details>
+        <details><summary>¿Puedo pedir cantidades diferentes?</summary><p>El catálogo muestra presentaciones frecuentes. Para cantidades distintas o una combinación personalizada, solicita una cotización por WhatsApp.</p></details>
+        <details><summary>¿Puedo combinar productos?</summary><p>Sí. En varias categorías se puede armar una selección según el evento y la cantidad requerida. Escríbenos y te ayudamos a elegir.</p></details>
+        <details><summary>¿Hacen delivery?</summary><p>Sí. El delivery se coordina por separado y tiene un costo adicional según la ubicación y las condiciones del pedido.</p></details>
+      </div>
+    </section>
+
+    <section class="final-cta"><span class="eyebrow light">Tu evento empieza aquí</span><h2>¿Ya sabes qué quieres servir?</h2><p>Escríbenos y armemos una propuesta para tus invitados.</p><a class="button ivory" data-whatsapp="Hola Bocatto, quisiera realizar una cotización para mi evento." target="_blank" rel="noopener">Hablar con Bocatto <span>↗</span></a></section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-brand"><img src="./logo.svg" alt="Logo Bocatto"><div><strong>BOCATTO</strong><span>Bocaditos para eventos</span></div></div>
+    <div><strong>Atención</strong><p>Arequipa, Perú<br>WhatsApp: +51 967 539 019</p></div>
+    <div><strong>Enlaces</strong><p><a href="#catalogo">Catálogo</a><br><a href="#como-pedir">Cómo pedir</a><br><a href="#faq">Preguntas frecuentes</a></p></div>
+    <div class="footer-bottom">© <span id="year"></span> Bocatto. Todos los derechos reservados.</div>
+  </footer>
+
+  <a class="floating-wa" data-whatsapp="Hola Bocatto, quisiera información sobre sus productos." target="_blank" rel="noopener" aria-label="Escribir a Bocatto por WhatsApp"><span>✆</span><b>WhatsApp</b></a>
+  <script src="./app.js" defer></script>
+</body>
 </html>
